@@ -1,1 +1,3 @@
-## Red Dragon
+## Vim - Red Dragon ColorScheme
+
+<img src="./Preview.png" />

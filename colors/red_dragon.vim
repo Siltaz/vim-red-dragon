@@ -26,9 +26,8 @@ if has("gui_running") || &t_Co == 256
     hi Constant cterm=NONE ctermfg=252 ctermbg=16 gui=NONE guifg=#d0d0d0 guibg=#000000
     hi String cterm=NONE ctermfg=245 ctermbg=16 gui=NONE guifg=#8a8a8a guibg=#000000
     hi Comment cterm=NONE ctermfg=240 ctermbg=16 gui=NONE guifg=#585858 guibg=#000000
-    hi Number cterm=NONE ctermfg=99 ctermbg=16 gui=NONE guifg=#875fff guibg=#000000
-    hi Function cterm=NONE ctermfg=31 ctermbg=16 gui=NONE guifg=#0087af guibg=#000000
-    hi Bracket cterm=NONE ctermfg=34 ctermbg=16 gui=NONE guifg=#00af00 guibg=#000000
+    hi Number cterm=NONE ctermfg=250 ctermbg=16 gui=NONE guifg=#bcbcbc guibg=#000000
+    hi Operator cterm=NONE ctermfg=99 ctermbg=16 gui=NONE guifg=#875fff guibg=#000000
     hi Error cterm=NONE ctermfg=255 ctermbg=88 gui=NONE guifg=#eeeeee guibg=#870000
     hi ErrorMsg cterm=NONE ctermfg=255 ctermbg=124 gui=NONE guifg=#eeeeee guibg=#af0000
     hi Search cterm=NONE ctermfg=245 ctermbg=236 gui=NONE guifg=#8a8a8a guibg=#303030
@@ -43,7 +42,7 @@ if has("gui_running") || &t_Co == 256
     hi Pmenu cterm=NONE ctermfg=255 ctermbg=240 gui=NONE guifg=#eeeeee guibg=#585858
     hi PmenuThumb cterm=NONE ctermfg=232 ctermbg=240 gui=NONE guifg=#080808 guibg=#585858
     hi SpecialKey cterm=NONE ctermfg=16 ctermbg=255 gui=NONE guifg=#000000 guibg=#eeeeee
-    hi MatchParen cterm=NONE ctermfg=16 ctermbg=240 gui=NONE guifg=#000000 guibg=#585858
+    hi MatchParen cterm=NONE ctermfg=160 ctermbg=16 gui=NONE guifg=#d70000 guibg=#000000
     hi CursorLine cterm=NONE ctermfg=NONE ctermbg=233 gui=NONE guifg=NONE guibg=#121212
     hi StatusLine cterm=bold,reverse ctermfg=245 ctermbg=16 gui=bold,reverse guifg=#8a8a8a guibg=#000000
     hi StatusLineNC cterm=reverse ctermfg=236 ctermbg=16 gui=reverse guifg=#303030 guibg=#000000
@@ -55,9 +54,8 @@ else
     hi Constant cterm=NONE ctermfg=Gray ctermbg=Black
     hi String cterm=NONE ctermfg=Gray ctermbg=Black
     hi Comment cterm=NONE ctermfg=DarkGray ctermbg=Black
-    hi Number cterm=NONE ctermfg=SlateBlue ctermbg=Black
-    hi Function cterm=NONE ctermfg=DeepSkyBlue ctermbg=Black
-    hi Bracket cterm=NONE ctermfg=Green ctermbg=Black
+    hi Number cterm=NONE ctermfg=Gray ctermbg=Black
+    hi Operator cterm=NONE ctermfg=SlateBlue ctermbg=Black
     hi Error cterm=NONE ctermfg=White ctermbg=DarkRed
     hi ErrorMsg cterm=NONE ctermfg=White ctermbg=Red
     hi Search cterm=NONE ctermfg=Gray ctermbg=DarkGray
@@ -72,7 +70,7 @@ else
     hi Pmenu cterm=NONE ctermfg=White ctermbg=DarkGray
     hi PmenuThumb cterm=NONE ctermfg=Black ctermbg=DarkGray
     hi SpecialKey cterm=NONE ctermfg=Black ctermbg=White
-    hi MatchParen cterm=NONE ctermfg=Black ctermbg=DarkGray
+    hi MatchParen cterm=NONE ctermfg=Red ctermbg=Black
     hi CursorLine cterm=NONE ctermfg=NONE ctermbg=Black
     hi StatusLine cterm=bold,reverse ctermfg=Gray ctermbg=Black
     hi StatusLineNC cterm=reverse ctermfg=DarkGray ctermbg=Black
@@ -80,6 +78,7 @@ else
     hi TermCursor cterm=reverse ctermfg=NONE ctermbg=NONE
 endif
 highlight! link Boolean Normal
+highlight! link Delimiter Normal
 highlight! link Identifier Normal
 highlight! link Title Normal
 highlight! link Debug Normal
@@ -89,8 +88,10 @@ highlight! link Macro Normal
 highlight! link ModeMsg Normal
 highlight! link MoreMsg Normal
 highlight! link Question Normal
+highlight! link Conditional Keyword
 highlight! link Statement Keyword
 highlight! link Structure Keyword
+highlight! link Function Keyword
 highlight! link Include Keyword
 highlight! link Type Keyword
 highlight! link Typedef Keyword
@@ -105,6 +106,7 @@ highlight! link PreCondit Keyword
 highlight! link PreProc Keyword
 highlight! link Repeat Keyword
 highlight! link Special Keyword
+highlight! link SpecialChar Keyword
 highlight! link StorageClass Keyword
 highlight! link SpecialComment String
 highlight! link CursorLineNr String
@@ -127,11 +129,3 @@ highlight! link Cursor StatusLine
 highlight! link Underlined SpellRare
 highlight! link rstEmphasis SpellRare
 highlight! link diffChanged DiffChange
-highlight! link SpecialChar Function
-highlight! link Conditional Function
-highlight! link r B
-highlight! link a B
-highlight! link c B
-highlight! link k B
-highlight! link e B
-highlight! link t B
