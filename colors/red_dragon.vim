@@ -1,7 +1,7 @@
 " Vim color file
 " Name:       red_dragon.vim
 " Maintainer: Ritesh Kumar Yadav <siltaz@proton.me>
-" Homepage:   https://github.com/siltaz/vim-red-galaxy/
+" Homepage:   https://github.com/siltaz/vim-red-dragon/
 
 " Basically: dark background, numerals & errors red,
 " rest different shades of gray.
