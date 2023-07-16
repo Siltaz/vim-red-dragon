@@ -32,9 +32,12 @@ if has("gui_running") || &t_Co == 256
     hi ErrorMsg cterm=NONE ctermfg=255 ctermbg=124 gui=NONE guifg=#eeeeee guibg=#af0000
     hi Search cterm=NONE ctermfg=245 ctermbg=236 gui=NONE guifg=#8a8a8a guibg=#303030
     hi IncSearch cterm=reverse ctermfg=255 ctermbg=245 gui=reverse guifg=#eeeeee guibg=#8a8a8a
-    hi DiffChange cterm=NONE ctermfg=160 ctermbg=255 gui=NONE guifg=#d70000 guibg=#eeeeee
-    hi DiffText cterm=bold ctermfg=250 ctermbg=196 gui=bold guifg=#bcbcbc guibg=#ff0000
-    hi SignColumn cterm=NONE ctermfg=124 ctermbg=240 gui=NONE guifg=#af0000 guibg=#585858
+    hi DiffChange cterm=NONE ctermfg=209 ctermbg=16 gui=NONE guifg=#ff875f guibg=#000000
+    hi DiffAdd cterm=NONE ctermfg=36 ctermbg=16 gui=NONE guifg=#00af87 guibg=#000000
+    hi DiffDelete cterm=NONE ctermfg=161 ctermbg=16 gui=NONE guifg=#d7005f guibg=#000000
+    hi DiffText cterm=bold ctermfg=250 ctermbg=16 gui=bold guifg=#bcbcbc guibg=#000000
+    hi diffCommon cterm=NONE ctermfg=34 ctermbg=16 gui=NONE guifg=#00af00 guibg=#000000
+    hi SignColumn cterm=NONE ctermfg=124 ctermbg=16 gui=NONE guifg=#af0000 guibg=#000000
     hi SpellBad cterm=undercurl ctermfg=255 ctermbg=88 gui=undercurl guifg=#eeeeee guibg=#870000
     hi SpellCap cterm=NONE ctermfg=255 ctermbg=124 gui=NONE guifg=#eeeeee guibg=#af0000
     hi SpellRare cterm=NONE ctermfg=124 ctermbg=16 gui=NONE guifg=#af0000 guibg=#000000
@@ -60,9 +63,12 @@ else
     hi ErrorMsg cterm=NONE ctermfg=White ctermbg=Red
     hi Search cterm=NONE ctermfg=Gray ctermbg=DarkGray
     hi IncSearch cterm=reverse ctermfg=White ctermbg=Gray
-    hi DiffChange cterm=NONE ctermfg=Red ctermbg=White
-    hi DiffText cterm=bold ctermfg=Gray ctermbg=Red
-    hi SignColumn cterm=NONE ctermfg=Red ctermbg=DarkGray
+    hi DiffChange cterm=NONE ctermfg=Salmon ctermbg=Black
+    hi DiffAdd cterm=NONE ctermfg=DarkCyan ctermbg=Black
+    hi DiffDelete cterm=NONE ctermfg=DeepPink ctermbg=Black
+    hi DiffText cterm=bold ctermfg=Gray ctermbg=Black
+    hi diffCommon cterm=NONE ctermfg=Green ctermbg=Black
+    hi SignColumn cterm=NONE ctermfg=Red ctermbg=Black
     hi SpellBad cterm=undercurl ctermfg=White ctermbg=DarkRed
     hi SpellCap cterm=NONE ctermfg=White ctermbg=Red
     hi SpellRare cterm=NONE ctermfg=Red ctermbg=Black
@@ -98,9 +104,6 @@ highlight! link Typedef Keyword
 highlight! link Todo Keyword
 highlight! link Label Keyword
 highlight! link Define Keyword
-highlight! link DiffAdd Keyword
-highlight! link diffAdded Keyword
-highlight! link diffCommon Keyword
 highlight! link Directory Keyword
 highlight! link PreCondit Keyword
 highlight! link PreProc Keyword
@@ -119,8 +122,6 @@ highlight! link iCursor SpecialKey
 highlight! link SpellLocal SpellCap
 highlight! link LineNr Comment
 highlight! link NonText Comment
-highlight! link DiffDelete Comment
-highlight! link diffRemoved Comment
 highlight! link PmenuSbar Visual
 highlight! link PmenuSel Visual
 highlight! link VisualNOS Visual
@@ -129,3 +130,5 @@ highlight! link Cursor StatusLine
 highlight! link Underlined SpellRare
 highlight! link rstEmphasis SpellRare
 highlight! link diffChanged DiffChange
+highlight! link diffRemoved DiffDelete
+highlight! link diffAdded DiffAdd
